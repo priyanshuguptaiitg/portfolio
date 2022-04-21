@@ -1,0 +1,142 @@
+\documentclass[12pt,a4wide]{report}
+
+\usepackage{amsmath,amsthm,amssymb,mathrsfs,setspace,pstricks}%amsmath, latexsym,footmisc
+
+\usepackage{play}
+\usepackage{pdfpages}
+\usepackage{epsfig}
+% \usepackage[grey,times]{quotchap}
+\usepackage[nottoc]{tocbibind}
+\usepackage{datetime}
+
+\newdateformat{mydate}{\monthname[\THEMONTH], \THEYEAR}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%
+
+\input xy
+\xyoption{all}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{notation}[theorem]{Notation}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+
+\begin{document}
+
+%\pagenumbering{arabic} \setcounter{page}{1}
+
+% --------------- Title page -----------------------
+\begin{titlepage}
+\enlargethispage{3cm}
+
+\begin{center}
+
+\vspace*{-2cm}
+
+\textbf{\Large PORTFOLIO OPTIMIZATION}
+
+\vfill
+
+ A Project Report Submitted \\
+ in Partial Fulfilment of the Requirements  \\
+  for the Degree of  \\[10pt]
+
+ {\Large \bf MASTER OF SCIENCE}\\[5pt]
+ in \\
+ {\large \bf Mathematics and Computing}
+
+ \vfill
+
+{\large \emph{by}}\\[5pt]
+{\large\bf {Priyanshu Gupta}}\\[5pt]
+{\large (Roll No. 202123034)}
+
+\vfill
+\includegraphics[height=2.5cm]{iitglogo.eps}
+
+\vspace*{0.5cm}
+
+{\em\large to the}\\[10pt]
+{\bf\large DEPARTMENT OF MATHEMATICS} \\[5pt]
+{\bf\large \mbox{INDIAN INSTITUTE OF TECHNOLOGY GUWAHATI}}\\[5pt]
+{\bf\large GUWAHATI - 781039, INDIA}\\[10pt]
+{\it\large \mydate\today}
+\end{center}
+
+\end{titlepage}
+
+\clearpage
+
+% --------------- Certificate page -----------------------
+\pagenumbering{roman} \setcounter{page}{2}
+\begin{center}
+{\Large{\bf{CERTIFICATE}}}
+\end{center}
+%\thispagestyle{empty}
+
+
+\noindent
+This is to certify that the work contained in this report entitled {\textbf{``Portfolio Optimization"}} submitted by \textbf{Priyanshu Gupta} (\textbf{Roll No: 202123034}) to Department of Mathematics, Indian Institute of Technology Guwahati towards the requirement of the course \textbf{MA699 Project} has been carried out by him under my supervision.
+
+\vspace{4cm}
+
+\noindent Guwahati - 781 039 \hfill (Prof. Chandan Pal)
+
+\noindent \mydate\today \hfill Project Supervisor
+
+\clearpage
+
+% --------------- Abstract page -----------------------
+\begin{center}
+{\Large{\bf{ABSTRACT}}}
+\end{center} 
+
+The main aim of the project is to optimize the portfolio consisting of risky as well as non risky assets. I started with defining several securities or contracts namely, bonds, stocks, forward, futures, swaps and options. I also described the time value of money - how simple/periodic compounding /continuous compounding interest works and how can we compare any two scheme , be it of any type of interest rate. In chapter 3, initially I explained the expected returns and risks associated with any (single) risky asset followed by two and then for several securities using few theorems and results. At last, I implemented the theory described in third chapter. I used an excel file for real market returns. The excel file contains the weekly returns of 87 stocks for 5 years (i.e., 261 weeks). I used an open source programming language - R, for statistical analysis of this data and concluded with the weights in both cases - MVP and MVL. I also gave the returns and risk value with this weighted portfolio. 
+
+\clearpage
+
+
+
+\tableofcontents
+\clearpage
+\listoffigures
+
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input chapter1.tex
+
+\input chapter2.tex
+
+\input chapter3.tex
+
+\input code.tex
+
+
+\nocite{david}
+\nocite{marek}
+\nocite{jaksa}
+
+\bibliographystyle{plain}
+\bibliography{bib}
+
+\end{document}
