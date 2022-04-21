@@ -1,0 +1,80 @@
+\chapter{Prerequisites}
+
+\section{Classification of Securities/Contracts}
+\begin{enumerate}
+    \item Basic Securities 
+    \begin{enumerate}
+        \item Risk Free (e.g. - Bonds).
+        \item Risky (e.g. - Stocks).
+    \end{enumerate}
+    \item Derivatives and Contracts
+    \begin{enumerate}
+        \item Forward or Futures
+        \item Swaps
+        \item Options
+    \end{enumerate}
+\end{enumerate}
+
+\section{Bonds}
+Bonds are fixed income securities which give the owner the right to a fixed, pre-determined payment (also called \textbf{nominal/face/par value or principal}), at a future determined date (also called the \textbf{maturity date}). The party that promises to pay is the \textbf{debtor} and the party that will get paid is the \textbf{creditor}. Both of these parties are called the \textbf{counter-parties}. The difference between the bond price and the nominal value is called \textbf{interest}. The interest as the percentage of the total value is called \textbf{interest rate}. Bonds are risk free securities in principal as you know the nominal value in advanced. If a person has some purchasing power that (s)he would prefer to delay in order to earn interest, then (s)he could buy a bond with long maturity. 
+\subsection{Types of Bonds}
+\begin{itemize}
+    \item Depending on Maturity :
+    \begin{enumerate}
+        \item Short Term Bonds (Less than or equal to 1 year maturity usually)
+        \item Long Term Bonds (More than 1 year maturity usually)
+    \end{enumerate}
+    \item Depending on Discounts :
+    \begin{enumerate}
+        \item Pure discount bonds (Involves only an initial and final payment)
+        \item Coupon bonds (Debtor makes various periodic payments called coupons, a predetermined percentage of face value, to the creditor)
+    \end{enumerate}
+\end{itemize}
+
+Price at which the bond is sold can be higher , exactly same and lower than the nominal value, than it's called \textbf{above par}, \textbf{at par} and \textbf{below par} respectively. Pure discount bonds are always below par while coupon bonds can be anything - above/at/below par.
+\subsection{Risk associated with bonds}
+\begin{enumerate}
+    \item \textbf{Credit or Default Risk} - If the debtor fails to meet the payment obligations of the bond (i.e. the debtor defaults).
+    \item \textbf{Inflation Risk} - Since the future prices are uncertain due to inflation, the actual face value (inflation adjusted) may be lesser than the (current) invested value.
+    \item \textbf{Liquidity Risk} - If the creditor sells the bonds prior to maturity, (s)he may get a lower price than expected.
+\end{enumerate}
+
+\section{Stocks}
+Stock is a security that gives its owner (stock-holder) the right to a proportion of any profit (dividends) that might be distributed rather than reinvested by the (stock-issuing) firm. The dividends are not known in advance and depends on the firm's profit and policy. Hence, there is no guarantee of any nominal value unlike in bonds. Stock can be sold to another person and that person will be the new owner of that stock from that time. Note that, there can be negative return (if the selling price is lower than the buying price), zero return (if the selling price is equal to the buying price) and positive return (if the selling price is greater than the buying price) in case of stock. There are two sources of returns in case of stocks -
+\begin{itemize}
+    \item \textbf{Dividend Gains} - Dividends received while in ownership of the stocks.
+    \item \textbf{Capital Gains} - Difference between selling price and buying price of the stocks.
+\end{itemize}
+
+\subsection{Short and Long Positions}
+\begin{itemize}
+    \item \textbf{Short Position} - Consists of borrowing the stock from someone who owns it and then selling it (here the short seller is in short position), with the hope of dropping of stock price to buy the stock at a lower price and return it to the owner (here the short seller is covering the short position). In case of bonds, the debtor is in short position.
+    \item \textbf{Long Position} - The act of buying the stock is said to be the long position. In case of bonds, the creditor is in long position.
+\end{itemize}
+
+\section{Forward or Futures}
+These are the contracts where one party agrees to buy the underlying asset at a future predetermined date (\textbf{Maturity date}) at a predetermined price (\textbf{Forward/Future Price}). The current market price of that asset is called \textbf{Spot Price}. The terms of a forward contract are negotiated between buyer and seller. Hence it is customizable. Also forward contracts are settled on a maturity date. Conversely, a futures contract is a standardized one where the conditions relating to quantity, date, and delivery are standardized. The future contract is marked to market on a daily basis, i.e. the profit or losses are settled daily. This is a zero sum game i.e. the profit of one party is the loss of other party.
+\section{Swaps}
+These are the contracts by which two parties exchange cash flows. In case of interest rate swaps, suppose you are paying back a loan whose interest rate is a variable and you give a fixed payment to a person (\textbf{swap seller}) and he takes care of all the variable payments up to a certain cap. The principal amount is called as \textbf{notional principal}.
+\section{Options}
+An option is a financial derivative or security that gives its owner the right to buy/sell another (underlying) security, on or before a predetermined date (\textbf{Maturity/Expiration Date $T$}) for a predetermined price (\textbf{Strike/Exercise Price $K$}). This is different than forward or futures in a context that the owner of a option may or may not buy/sell underlying asset. The act of buying/selling the underlying asset is called \textbf{exercising the option}. Since the owner has some additional right, he has to pay some upfront fee (\textbf{Premium/Option Price}) to the seller of the option right at the beginning. Options work as the hedge of the risk of the market.
+\subsection{Classifications of options}
+\begin{itemize}
+    \item \textbf{Call Option} - The owner has the right to buy the underlying asset.
+    \item \textbf{Put Option} - The owner has the right to sell the underlying asset.
+    \item \textbf{European Option} - The owner has the right to buy/sell the underlying asset only on a fixed future date.
+    \item \textbf{American Option} - The owner has the right to buy/sell the underlying asset on or before (including) a fixed future date. (Early exercise is also possible).
+\end{itemize}
+So there can be basically four different combinations, namely -
+\begin{enumerate}
+    \item \textbf{European Call}
+    \\Let us take a scenario where the owner of the option has the right to buy some stock on maturity date $T$ and strike price $K$. Let $S(t)$ be the spot price of that stock at time $t$ and $S(T)$ be the price of the stock at time $T(>t)$. If $S(T)>K$, the owner will exercise the call option and get a profit of $S(T)-K$ otherwise the owner will not exercise the call option. Hence,$$Payoff = max\{S(T)-K,0\}$$
+    \item \textbf{European Put}
+    $$Payoff = max\{K-S(T),0\}$$
+    \item \textbf{American Call}
+    \\Suppose the option is exercised at time $T1 \leq T$
+    
+    $$Payoff = max\{S(T1)-K,0\}$$
+    \item \textbf{American Put}
+    $$Payoff = max\{K-S(T1),0\}$$
+\end{enumerate}
